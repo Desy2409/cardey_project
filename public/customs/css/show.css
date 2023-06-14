@@ -1,0 +1,21 @@
+#footer .footer-bottom {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #fff;
+}
+
+#footer .copyright {
+    font-size: 13px;
+}
+
+#footer .credits {
+    font-size: 10px;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+    padding-top: 10px;
+}
+
+#footer .footer-top {
+    background: aliceblue;
+}

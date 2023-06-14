@@ -1,0 +1,30 @@
+[
+    {
+        "matricule": "2409SSAGOBI#ONG#ADMIN",
+        "lastname": "SUPER",
+        "firstname": "Super Admin",
+        "email": "super.admin@domain.tg",
+        "password": "P@ssw0rd#"
+    },
+    {
+        "matricule": "2409SAGOBI#ONG#ADMIN",
+        "lastname": "SUPER",
+        "firstname": "Admin",
+        "email": "admin@domain.tg",
+        "password": "Pass2023"
+    },
+    {
+        "matricule": "2409ATGOBI#ONG#ALPHA",
+        "lastname": "ALPHA",
+        "firstname": "Test",
+        "email": "alpha@domain.tg",
+        "password": "Alpha2023"
+    },
+    {
+        "matricule": "2409BTGOBI#ONG#BRAVO",
+        "lastname": "Bravo",
+        "firstname": "Test",
+        "email": "bravo@domain.tg",
+        "password": "Bravo2023"
+    }
+]

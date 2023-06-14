@@ -1,0 +1,79 @@
+[
+    {
+        "code": "TEXTE",
+        "wording": "Fichiers texte",
+        "description": "Fichiers texte : Stockent des données sous forme de texte brut, souvent encodé en ASCII ou en UTF-8. Les fichiers texte peuvent être lus et modifiés avec un éditeur de texte simple.",
+        "max_size": "",
+        "authorized_files": ["txt"]
+    },
+    {
+        "code": "BINAIRE",
+        "wording": "Fichiers binaires",
+        "description": "Fichiers binaires : Stockent des données sous forme binaire, généralement non lisibles directement par un éditeur de texte. Ils peuvent contenir différents types de données tels que des images, des vidéos, des fichiers exécutables, etc.",
+        "max_size": "",
+        "authorized_files": ["jpg", "mp4", "exe"]
+    },
+    {
+        "code": "IMAGE",
+        "wording": "Fichiers image",
+        "description": "Fichiers image : Contiennent des données graphiques ou visuelles, souvent au format compressé.",
+        "max_size": "",
+        "authorized_files": ["jpeg", "png", "gif", "bmp"]
+    },
+    {
+        "code": "AUDIO",
+        "wording": "Fichiers audio",
+        "description": "Fichiers audio : Stockent des données audio, comme des morceaux de musique ou des enregistrements sonores.",
+        "max_size": "",
+        "authorized_files": ["mp3", "wav", "aac", "flac"]
+    },
+    {
+        "code": "VIDEO",
+        "wording": "Fichiers vidéo",
+        "description": "Fichiers vidéo : Contiennent des données vidéo compressées pour la lecture de séquences vidéo.",
+        "max_size": "",
+        "authorized_files": ["mp4", "avi", "mov", "mkv"]
+    },
+    {
+        "code": "FEUILLE EXCEL",
+        "wording": "Fichiers de feuilles de calcul",
+        "description": "Fichiers de feuilles de calcul : Stockent des données organisées sous forme de tableaux.",
+        "max_size": "",
+        "authorized_files": ["xls", "xlsx", "csv"]
+    },
+    {
+        "code": "DOCUMENT WORD",
+        "wording": "Fichiers Word",
+        "description": "Fichiers Word : Utilisés pour les documents créés avec Microsoft Word ou d'autres applications de traitement de texte. Ils stockent du texte, des images, des tableaux et d'autres éléments de mise en page.",
+        "max_size": "",
+        "authorized_files": ["docx"]
+    },
+    {
+        "code": "PRESENTATION",
+        "wording": "Fichiers de présentation",
+        "description": "Fichiers de présentation : Utilisés pour créer et afficher des présentations.",
+        "max_size": "",
+        "authorized_files": ["ppt", "pptx", "pdf"]
+    },
+    {
+        "code": "COMPRESSION",
+        "wording": "Fichiers compressés",
+        "description": "Fichiers compressés : Contiennent un ou plusieurs fichiers ou dossiers compressés pour économiser de l'espace de stockage et faciliter le transfert.",
+        "max_size": "",
+        "authorized_files": ["zip","rar","tar.gz"]
+    },
+    {
+        "code": "BASE DE DONNEES",
+        "wording": "Fichiers de bases de données",
+        "description": "Fichiers de bases de données : Stockent des données structurées et organisées, souvent utilisées par des systèmes de gestion de bases de données.",
+        "max_size": "",
+        "authorized_files": ["mdb","sqlite","dbf"]
+    },
+    {
+        "code": "CODES SOURCES",
+        "wording": "Fichiers de code source",
+        "description": "Fichiers de code source : Contiennent du code informatique écrit dans un langage de programmation spécifique.",
+        "max_size": "",
+        "authorized_files": ["c","cpp","java","py"]
+    }
+]
