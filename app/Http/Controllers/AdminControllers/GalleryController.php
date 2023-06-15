@@ -3,13 +3,15 @@
 namespace App\Http\Controllers\AdminControllers;
 
 use App\Http\Controllers\Controller;
+use App\Repositories\BaseRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class DashboardController extends Controller
+class GalleryController extends Controller
 {
+    public $repo;
     public $user;
-    public function __construct()
+    public function __construct(BaseRepository $repo)
     {
         $this->middleware('auth');
         $this->middleware(function ($request, $next) {
@@ -17,14 +19,13 @@ class DashboardController extends Controller
 
             return $next($request);
         });
+        $this->repo = $repo;
     }
-    
+
     public function index()
     {
-        // dd($this->user);
-        $user = $this->user;
-        $indexDash = "Tableau de bord";
+        $indexGallery = "Mise à jour de la gallerie";
 
-        return view('admin.pages.dashboard', compact('user','indexDash'));
+        return view('admin.pages.gallery', compact('indexGallery'));
     }
 }

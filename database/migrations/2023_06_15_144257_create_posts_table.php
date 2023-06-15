@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Str;
 
 return new class extends Migration
 {
@@ -13,10 +14,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('faqs', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->text('question');
-            $table->text('response');
+            $table->string('code')->default(strtoupper(Str::random(10)));
+            $table->string('wording');
+            $table->string('description')->nullable();
             $table->timestamps();
             $table->foreignId('user_create_id')->nullable()->constrained('users');
             $table->foreignId('user_edit_id')->nullable()->constrained('users');
@@ -34,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('faqs');
+        Schema::dropIfExists('posts');
     }
 };

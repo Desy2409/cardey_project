@@ -22,7 +22,10 @@
                             <a href="#"><i class="ri-twitter-fill"></i></a>
                             <a href="#"><i class="ri-facebook-fill"></i></a>
                             <a href="#"><i class="ri-instagram-fill"></i></a>
+                            <a href="#"> <i class="ri-skype-line"></i> </a>
                             <a href="#"> <i class="ri-linkedin-box-fill"></i> </a>
+                            <a href="#"> <i class="ri-whatsapp-line"></i> </a>
+                            {{-- <a href="#"> <i class="ri-tiktok-line"></i> </a> --}}
                         </div>
                     </div>
                 </div>

@@ -29,42 +29,42 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label" for="id-twitter">Twitter </label>
-                            <input type="text" class="form-control @error('twitter') is-invalid @enderror" name="twitter" value="{{ isset($about) ? $about->twitter : old('twitter') }}" id="id-twitter" placeholder="Saisir le lien Twitter">
+                            <input type="text" class="form-control @error('twitter') is-invalid @enderror" name="twitter" value="{{ isset($about) ? $about->twitter : old('twitter') }}" id="id-twitter" placeholder="Saisissez le lien Twitter">
                             @error('twitter')
                             <span class="invalid-feedback" role="alert">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label" for="id-facebook">Facebook </label>
-                            <input type="text" class="form-control @error('facebook') is-invalid @enderror" name="facebook" value="{{ isset($about) ? $about->facebook : old('facebook') }}" id="id-facebook" placeholder="Saisir le lien Facebook">
+                            <input type="text" class="form-control @error('facebook') is-invalid @enderror" name="facebook" value="{{ isset($about) ? $about->facebook : old('facebook') }}" id="id-facebook" placeholder="Saisissez le lien Facebook">
                             @error('facebook')
                             <span class="invalid-feedback" role="alert">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label" for="id-instagram">Instagram </label>
-                            <input type="text" class="form-control @error('instagram') is-invalid @enderror" name="instagram" value="{{ isset($about) ? $about->instagram : old('instagram') }}" id="id-instagram" placeholder="Saisir le lien Instagram">
+                            <input type="text" class="form-control @error('instagram') is-invalid @enderror" name="instagram" value="{{ isset($about) ? $about->instagram : old('instagram') }}" id="id-instagram" placeholder="Saisissez le lien Instagram">
                             @error('instagram')
                             <span class="invalid-feedback" role="alert">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label" for="id-skype">Skype </label>
-                            <input type="text" class="form-control @error('skype') is-invalid @enderror" name="skype" value="{{ isset($about) ? $about->skype : old('skype') }}" id="id-google-plus" placeholder="Saisir le lien Skype">
+                            <input type="text" class="form-control @error('skype') is-invalid @enderror" name="skype" value="{{ isset($about) ? $about->skype : old('skype') }}" id="id-google-plus" placeholder="Saisissez le lien Skype">
                             @error('skype')
                             <span class="invalid-feedback" role="alert">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label" for="id-linkedin">Linkedin </label>
-                            <input type="text" class="form-control @error('linkedin') is-invalid @enderror" name="linkedin" value="{{ isset($about) ? $about->linkedin : old('linkedin') }}" id="id-linkedin" placeholder="Saisir le lien Linkedin">
+                            <input type="text" class="form-control @error('linkedin') is-invalid @enderror" name="linkedin" value="{{ isset($about) ? $about->linkedin : old('linkedin') }}" id="id-linkedin" placeholder="Saisissez le lien Linkedin">
                             @error('linkedin')
                             <span class="invalid-feedback" role="alert">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label" for="id-whatsapp">Whatsapp </label>
-                            <input type="text" class="form-control @error('whatsapp') is-invalid @enderror" name="whatsapp" value="{{ isset($about) ? $about->whatsapp : old('whatsapp') }}" id="id-whatsapp" placeholder="Saisir le lien Whatsapp">
+                            <input type="text" class="form-control @error('whatsapp') is-invalid @enderror" name="whatsapp" value="{{ isset($about) ? $about->whatsapp : old('whatsapp') }}" id="id-whatsapp" placeholder="Saisissez le lien Whatsapp">
                             @error('whatsapp')
                             <span class="invalid-feedback" role="alert">{{ $message }}</span>
                             @enderror
@@ -102,7 +102,7 @@
 <script>
     $(document).ready(function() {
         // Datatables Responsive
-        $("#id-about-datatable").DataTable({
+        $("#id-team-datatable").DataTable({
             responsive: true, 
             language: {
                 url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/fr-FR.json', 

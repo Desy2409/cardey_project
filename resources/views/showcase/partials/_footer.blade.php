@@ -10,9 +10,9 @@
                     <h3>Gobi#ONG</h3>
                     @if (isset($contact) && $contact->address != null) {!! $contact->address !!} <br><br> @endif
                     <p>
-                        <strong>Téléphone :</strong> @if (isset($contact)) {!! showFooterPhone() !!} @endif
+                        <strong>Téléphone :</strong> {!! showFooterPhone() !!} 
 
-                        <strong>Email :</strong> @if (isset($contact)) {!! showEmail('footer') !!} @endif
+                        <strong>Email :</strong> {!! showFooterEmail() !!} 
                     </p>
                 </div>
 

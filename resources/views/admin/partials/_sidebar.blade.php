@@ -17,38 +17,48 @@
             {{-- <li class="sidebar-header">
                 Pages
             </li> --}}
-            <li class="sidebar-item active">
-                <a class="sidebar-link">
+            <li class="sidebar-item @if (isset($indexDash)) active @endif">
+                <a class="sidebar-link" href="{{ route('dash.index') }}">
                     <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Tableau de bord</span>
                     {{-- <span class="badge badge-sidebar-primary">5</span> --}}
                 </a>
             </li>
-            <li class="sidebar-item active">
+            <li class="sidebar-item @if (isset($indexPost)) active @endif">
+                <a data-bs-target="#parameters" data-bs-toggle="collapse" class="sidebar-link @if (isset($indexPost)) active @else collapsed @endif ">
+                    <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Paramètres</span>
+                </a>
+                <ul id="parameters" class="sidebar-dropdown list-unstyled collapse @if (isset($indexPost)) show @endif" data-bs-parent="#sidebar">
+                    <li class="sidebar-item @if (isset($indexPost)) active @endif">
+                        <a class="sidebar-link @if (isset($indexPost)) text-white @endif" href="{{ route('post.index') }}"><i class="align-middle" data-feather="chevron-right"></i>Poste</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidebar-item @if (isset($indexSectionResume)) active @endif">
                 <a class="sidebar-link" href="{{ route('config_section.index') }}">
                     <i class="align-middle" data-feather="info"></i> <span class="align-middle">Config. titre sections</span>
                 </a>
             </li>
-            <li class="sidebar-item active">
+            <li class="sidebar-item @if (isset($indexContact)) active @endif">
                 <a class="sidebar-link" href="{{ route('contact.index') }}">
                     <i class="align-middle" data-feather="info"></i> <span class="align-middle">Contact</span>
                 </a>
             </li>
-            <li class="sidebar-item active">
-                <a class="sidebar-link">
+            <li class="sidebar-item @if (isset($indexTeam)) active @endif">
+                <a class="sidebar-link" href="{{ route('team.index') }}">
                     <i class="align-middle" data-feather="users"></i> <span class="align-middle">Notre équipe</span>
                 </a>
             </li>
-            <li class="sidebar-item active">
-                <a class="sidebar-link">
+            <li class="sidebar-item @if (isset($indexGallery)) active @endif">
+                <a class="sidebar-link" href="{{ route('gallery.index') }}">
                     <i class="align-middle" data-feather="image"></i> <span class="align-middle">Gallerie</span>
                 </a>
             </li>
-            <li class="sidebar-item active">
+            <li class="sidebar-item @if (isset($indexFaq)) active @endif">
                 <a class="sidebar-link" href="{{ route('faq.index') }}">
                     <i class="align-middle" data-feather="help-circle"></i> <span class="align-middle">Foire Aux Questions</span>
                 </a>
             </li>
-            <li class="sidebar-item active">
+            <li class="sidebar-item @if (isset($indexAbout)) active @endif">
                 <a class="sidebar-link" href="{{ route('about.index') }}">
                     <i class="align-middle" data-feather="globe"></i> <span class="align-middle">A propos de nous</span>
                 </a>

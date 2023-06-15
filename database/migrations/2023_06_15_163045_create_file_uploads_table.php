@@ -13,10 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('faqs', function (Blueprint $table) {
+        Schema::create('file_uploads', function (Blueprint $table) {
             $table->id();
-            $table->text('question');
-            $table->text('response');
+            $table->string('mime');
+            $table->string('original_filename');
+            $table->string('filename');
+            $table->string('link');
+            $table->string('src');
+            $table->string('personalized_filename')->nullable();
+            $table->double('size')->nullable()->default(0);
+            $table->foreignId('file_type_id')->nullable()->constrained();
+            $table->foreignId('folder_id')->nullable()->constrained();
+            $table->nullableMorphs('fileable');
             $table->timestamps();
             $table->foreignId('user_create_id')->nullable()->constrained('users');
             $table->foreignId('user_edit_id')->nullable()->constrained('users');
@@ -34,6 +42,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('faqs');
+        Schema::dropIfExists('file_uploads');
     }
 };

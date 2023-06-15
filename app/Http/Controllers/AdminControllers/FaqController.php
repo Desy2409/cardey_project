@@ -50,7 +50,7 @@ class FaqController extends Controller
 
             return redirect()->back()->with('success', ['title' => "FOIRE AUX QUESTIONS", 'message' => "Enregistrement effectué avec succès."]);
         } catch (Exception $e) {
-            // dd($e);
+            dd($e);
             return redirect()->back()->with('error', ['title' => "Erreur FOIRE AUX QUESTIONS", 'message' => "Veuillez contacter le développeur."]);
         }
     }

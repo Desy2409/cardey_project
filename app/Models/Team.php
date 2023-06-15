@@ -11,7 +11,7 @@ class Team extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'code', 'name', 'post', 'description', 'face_link', 'insta_link', 'tweet_link', 'linked_link',
+        'code', 'name', 'post', 'description', 'twitter', 'facebook', 'instagram', 'linkedin', 'whatsapp',
         'user_create_id', 'user_edit_id', 'user_delete_id', 'user_restore_id', 'restored_at'
     ];
 
@@ -35,5 +35,10 @@ class Team extends Model
     public function getUserRestoreAttribute()
     {
         return User::where('id', $this->user_restore_id)->first();
+    }
+
+    public function post()
+    {
+        return $this->belongsTo(Post::class);
     }
 }
