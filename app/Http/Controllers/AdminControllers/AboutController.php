@@ -92,6 +92,32 @@ class AboutController extends Controller
             $this->validate(
                 $request,
                 [
+                    'twitter' => ['nullable', 'regex:/^(https?:\/\/)?(www\.)?twitter\.com\//'],
+                    'facebook' => ['nullable', 'regex:/^(https?:\/\/)?(www\.)?facebook\.com\//'],
+                    'instagram' => ['nullable', 'regex:/^(https?:\/\/)?(www\.)?instagram\.com\//'],
+                    'linkedin' => ['nullable', 'regex:/^(https?:\/\/)?(www\.)?linkedin\.com\//'],
+                    'skype' => ['nullable', 'regex:/^(https?:\/\/)?join\.skype\.com\//'],
+                    'whatsapp' => ['nullable', 'regex:/^(https?:\/\/)?(www\.)?(wa\.me\/|api\.whatsapp\.com)/'],
+                ],
+                [
+                    'twitter.regex' => "Le lien doit être un lien Twitter valide.",
+                    'facebook.regex' => "Le lien doit être un lien Facebook valide.",
+                    'instagram.regex' => "Le lien doit être un lien Instagram valide.",
+                    'linkedin.regex' => "Le lien doit être un lien LinkedIn valide.",
+                    'skype.regex' => "Le lien doit être un lien Skype valide.",
+                    'whatsapp.regex' => "Le lien doit être un lien WhatsApp valide.",
+                ]
+            );
+        } catch (ValidationException $e) {
+            throw $e; // Lancer l'exception pour arrêter le processus
+        }
+    }
+    private function validationsOld($request)
+    {
+        try {
+            $this->validate(
+                $request,
+                [
                     'twitter' => 'nullable|regex:/^(https?:\/\/)?(www\.)?twitter\.com\//',
                     'facebook' => 'nullable|regex:/^(https?:\/\/)?(www\.)?facebook\.com\//',
                     'instagram' => 'nullable|regex:/^(https?:\/\/)?(www\.)?instagram\.com\//',

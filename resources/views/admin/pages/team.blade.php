@@ -13,28 +13,36 @@
         </div>
         <div class="card-body">
             @if (isset($team))
-            <form id="" method="post" action="{{ route('team.update', $team->id) }}">
+            <form id="" method="post" action="{{ route('team.update', $team->id) }}" enctype="multipart/form-data">
                 @method('patch')
                 @else
-                <form id="" method="post" action="{{ route('team.store') }}">
+                <form id="" method="post" action="{{ route('team.store') }}" enctype="multipart/form-data">
                     @endif
                     @csrf
-                    <div id="rowPreview" class="row text-center d-none" style="height: 250px">
+                    {{-- <div id="rowPreview" class="row text-center d-none" style="height: 250px"> --}}
+                        {{-- <img id="previewImage" class="" src="#" alt="Image Preview" style="width: 30%; height: 90%; border-radius: 50%;"> --}}
+                    <div id="rowPreview" class="row text-center d-none" style="height: 90%;">
                         <div class="col-md-12">
-                            {{-- <img id="previewImage" class="" src="#" alt="Image Preview" style="width: 30%; height: 90%; border-radius: 50%;"> --}}
-                            <img id="previewImage" class="" src="#" alt="Image Preview" style="border-radius: 50%;">
+                            <img id="previewImage" class="" src="#" alt="Image Preview" style="width: 30%; border-radius: 50% !important;">
                         </div>
                     </div>
-                    <div class="row" id="row-info">
-                        <div class="col-md-6 mb-3">
+                    <div class="row mb-3 mt-2">
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label" for="id-profile-photo">Charger la photo de profil</label>
                                 <input type="file" class="form-control @error('profile_photo') is-invalid @enderror" name="profile_photo" id="id-profile-photo">
                                 @error('profile_photo')
                                 <span class="invalid-feedback" role="alert">{{ $message }}</span>
                                 @enderror
+                                <span class="text-danger d-none" id="imgFormatError" role="alert" style="font-size:80%"></span>
                             </div>
                         </div>
+                        <div class="col-md-3">
+                        </div>
+                    </div>
+                    <div class="row" id="row-info">
                         <div class="col-md-6 mb-3">
                             <label class="form-label" for="id-code">Code <span class="text-danger">*</span></label>
                             <input type="text" class="form-control @error('code') is-invalid @enderror" name="code" value="{{ isset($team) ? $team->code : old('code') }}" id="id-code" placeholder="Saisissez le code">
@@ -44,7 +52,7 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label" for="id-post">Poste <span class="text-danger">*</span></label>
-                            <select name="activity" class="form-control" id="id-post">
+                            <select name="post_id" class="form-control @error('post_id') is-invalid @enderror" id="id-post">
                                 <option value="" id="post-default">Chosissiez un poste</option>
                                 @if (!empty($posts) && sizeof($posts)>0)
                                 @foreach ($posts as $post)
@@ -52,10 +60,13 @@
                                 @endforeach
                                 @endif
                             </select>
+                            @error('post_id')
+                            <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                            @enderror
                         </div>
                         <div class="col-md-12 mb-3">
                             <label class="form-label" for="id-name">Nom complet <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ isset($team) ? $team->name : old('name') }}" id="id-name" placeholder="Exemple : Prénom(s) Nom">
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ isset($team) ? $team->name : old('name') }}" id="id-name" placeholder="Exemple : Prénom Nom">
                             @error('name')
                             <span class="invalid-feedback" role="alert">{{ $message }}</span>
                             @enderror
@@ -103,9 +114,9 @@
                             @enderror
                         </div>
                         <div class="col-md-12 mb-3">
-                            <label class="form-label" for="id-name">Adresse <span class="text-danger">*</span></label>
-                            <textarea name="address" id="" class="form-control" rows="2">@if (isset($team)) {{ $team->address }} @else {{ old('address') }} @endif</textarea>
-                            @error('address')
+                            <label class="form-label" for="id-name">Biographie <span class="text-danger">*</span></label>
+                            <textarea name="biography" id="" class="form-control @error('biography') is-invalid @enderror" rows="2">@if (isset($team)) {{ $team->biography }} @else {{ old('biography') }} @endif</textarea>
+                            @error('biography')
                             <span class="invalid-feedback" role="alert">{{ $message }}</span>
                             @enderror
                         </div>
@@ -126,21 +137,69 @@
 @section('scripts')
 <script>
     const fileInput = document.getElementById('id-profile-photo');
-    const rowInfo = document.getElementById('row-info');
     const rowPreview = document.getElementById('rowPreview');
     const previewImage = document.getElementById('previewImage');
+    const imgFormatError = document.getElementById('imgFormatError');
+
 
     fileInput.addEventListener('change', function() {
-        const file = this.files[0];
-        const reader = new FileReader();
-        reader.addEventListener('load', function() {
-            $('#rowPreview').removeClass('d-none')
-            // rowInfo.style.marginTop = "8rem !important;"
-            // rowInfo.style.setProperty('margin-top', '8rem', 'important');
-            rowPreview.style.setProperty('margin-bottom', '5rem', 'important');
-            previewImage.src = this.result;
-        });
-        reader.readAsDataURL(file);
-    });
+  const file = this.files[0];
+  const reader = new FileReader();
+
+  reader.addEventListener('load', function() {
+    // Créer une nouvelle image
+    const img = new Image();
+
+    // Définir la fonction de rappel pour la vérification des dimensions
+    img.onload = function() {
+    //   if (this.width == 239 && this.height == 308) {
+        // Les dimensions de l'image sont valides, effectuer le traitement
+        imgFormatError.classList.add('d-none');
+        $('#rowPreview').removeClass('d-none');
+        // rowPreview.style.setProperty('margin-bottom', '5rem', 'important');
+        previewImage.src = reader.result;
+    // } else {
+    //     // Les dimensions de l'image ne correspondent pas
+    //     imgFormatError.textContent = "Le format de l'image doit être de 239x308 pixels.";
+    //     imgFormatError.classList.remove('d-none');
+    //     $('#rowPreview').addClass('d-none');
+    //     // Réinitialiser l'élément d'entrée de fichier
+    //     fileInput.value = '';
+    //     // Réinitialiser l'aperçu de l'image
+    //     previewImage.src = '';
+    //   }
+    };
+
+    // Charger l'image pour vérifier les dimensions
+    img.src = reader.result;
+  });
+
+  reader.readAsDataURL(file);
+});
+
+    // fileInput.addEventListener('change', function() {
+    //     const file = this.files[0];
+    //     const reader = new FileReader();
+    //     reader.addEventListener('load', function() {
+    //         if (this.width === 239 && this.height === 308) {
+    //             // Les dimensions de l'image sont valides, effectuer le traitement
+    //             imgFormatError.classList.add('d-none');
+    //             $('#rowPreview').removeClass('d-none')
+    //             rowPreview.style.setProperty('margin-bottom', '5rem', 'important');
+    //             previewImage.src = this.result;
+    //         } else {
+    //             // alert("Le format de l'image doit être de 239x308 pixels.")
+    //             // Les dimensions de l'image ne correspondent pas
+    //             imgFormatError.textContent = "Le format de l'image doit être de 239x308 pixels.";
+    //             imgFormatError.classList.remove('d-none');
+    //             // Réinitialiser l'élément d'entrée de fichier
+    //             fileInput.value = '';
+    //             // Réinitialiser l'aperçu de l'image
+    //             previewImage.src = '';
+    //         }
+    //     });
+    //     reader.readAsDataURL(file);
+    // });
+
 </script>
 @endsection

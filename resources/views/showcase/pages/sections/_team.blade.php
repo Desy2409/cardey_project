@@ -11,27 +11,35 @@
 
         <div class="row">
 
-            <div class="col-lg-6">
-                <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="pic"><img src="{{ asset('theme_assets/showcase/img/team/team-1.jpg') }}" class="img-fluid" alt=""></div>
-                    <div class="member-info">
-                        <h4>Walter White</h4>
-                        <span>Chief Executive Officer</span>
-                        <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                        <div class="social">
-                            <a href="#"><i class="ri-twitter-fill"></i></a>
-                            <a href="#"><i class="ri-facebook-fill"></i></a>
-                            <a href="#"><i class="ri-instagram-fill"></i></a>
-                            <a href="#"> <i class="ri-skype-line"></i> </a>
-                            <a href="#"> <i class="ri-linkedin-box-fill"></i> </a>
-                            <a href="#"> <i class="ri-whatsapp-line"></i> </a>
-                            {{-- <a href="#"> <i class="ri-tiktok-line"></i> </a> --}}
+            @if ($teams != null && sizeof($teams) > 0)
+                @foreach ($teams as $team)
+                <div class="col-lg-6">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+                        {{-- <div class="pic"><img src="{{ asset('theme_assets/showcase/img/team/team-1.jpg') }}" class="img-fluid" alt=""></div> --}}
+                        <div class="pic"><img src="{{ asset(profilePic($team->id)->src) }}" class="img-fluid" alt="{{ profilePic($team->id)->filename }}"></div>
+                        <div class="member-info">
+                            {{-- <h4>Walter White</h4>
+                            <span>Chief Executive Officer</span>
+                            <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p> --}}
+                            <h4>{{ $team->name }}</h4>
+                            <span>{{ $team->post->wording }}</span>
+                            <p>{{ $team->biography }}</p>
+                            <div class="social">
+                                <a href="#"><i class="ri-twitter-fill"></i></a>
+                                <a href="#"><i class="ri-facebook-fill"></i></a>
+                                <a href="#"><i class="ri-instagram-fill"></i></a>
+                                <a href="#"> <i class="ri-skype-line"></i> </a>
+                                <a href="#"> <i class="ri-linkedin-box-fill"></i> </a>
+                                <a href="#"> <i class="ri-whatsapp-line"></i> </a>
+                                {{-- <a href="#"> <i class="ri-tiktok-line"></i> </a> --}}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                @endforeach
+            @endif
 
-            <div class="col-lg-6 mt-4 mt-lg-0">
+            {{-- <div class="col-lg-6 mt-4 mt-lg-0">
                 <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
                     <div class="pic"><img src="{{ asset('theme_assets/showcase/img/team/team-2.jpg') }}" class="img-fluid" alt=""></div>
                     <div class="member-info">
@@ -46,9 +54,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
-            <div class="col-lg-6 mt-4">
+            {{-- <div class="col-lg-6 mt-4">
                 <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
                     <div class="pic"><img src="{{ asset('theme_assets/showcase/img/team/team-3.jpg') }}" class="img-fluid" alt=""></div>
                     <div class="member-info">
@@ -63,9 +71,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
-            <div class="col-lg-6 mt-4">
+            {{-- <div class="col-lg-6 mt-4">
                 <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
                     <div class="pic"><img src="{{ asset('theme_assets/showcase/img/team/team-4.jpg') }}" class="img-fluid" alt=""></div>
                     <div class="member-info">
@@ -80,7 +88,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
 

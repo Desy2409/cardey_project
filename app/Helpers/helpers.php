@@ -1,6 +1,8 @@
 <?php
 
 use App\Models\Contact;
+use App\Models\FileUpload;
+use App\Models\Team;
 use App\Repositories\BaseRepository;
 
 if (!function_exists('user')) {
@@ -188,5 +190,18 @@ if (!function_exists('showSocialNetworks')) {
     {
         $repo = app(BaseRepository::class);
         $contact = $repo->first(Contact::class);
+    }
+}
+
+if (!function_exists('profilePic')) {
+    function profilePic($id)
+    {
+        $repo = app(BaseRepository::class);
+
+        $team = $repo->findOrFail(Team::class, $id);
+        $file = $repo->selectOneStartWithByTwo(FileUpload::class, 'fileable_type', Team::class, 'fileable_id', $team->id, 'filename', 'profile');
+
+        // dd($file);
+        return $file;
     }
 }

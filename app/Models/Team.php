@@ -11,8 +11,8 @@ class Team extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'code', 'name', 'post', 'description', 'twitter', 'facebook', 'instagram', 'linkedin', 'whatsapp',
-        'user_create_id', 'user_edit_id', 'user_delete_id', 'user_restore_id', 'restored_at'
+        'code', 'name', 'post', 'biography', 'twitter', 'facebook', 'instagram', 'linkedin', 'whatsapp',
+        'post_id', 'user_create_id', 'user_edit_id', 'user_delete_id', 'user_restore_id', 'restored_at'
     ];
 
     protected $appends = ['user_create', 'user_edit', 'user_delete', 'user_restore', 'restored_at'];

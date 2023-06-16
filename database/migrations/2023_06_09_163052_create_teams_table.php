@@ -18,8 +18,7 @@ return new class extends Migration
             $table->id();
             $table->string('code')->default(strtoupper(Str::random(10)));
             $table->string('name');
-            $table->string('post');
-            $table->string('description');
+            $table->string('biography');
             $table->string('twitter')->nullable();
             $table->string('facebook')->nullable();
             $table->string('instagram')->nullable();

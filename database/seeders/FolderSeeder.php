@@ -16,15 +16,27 @@ class FolderSeeder extends Seeder
      */
     public function run()
     {
-        $existingFolder = Folder::where('affiliation', 'parent')->where('name', "DOSSIER RACINE")->first();
-        if (!$existingFolder) {
+        $existingRootFolder = Folder::where('affiliation', 'parent')->where('name', "DOSSIER RACINE")->first();
+        if (!$existingRootFolder) {
             Folder::create([
                 'affiliation' => 'parent',
                 'name' => "DOSSIER RACINE",
                 'path' => "DOSSIER RACINE",
             ]);
-
+            
             Storage::makeDirectory("public/DOSSIER RACINE");
+        }
+
+        $existingTeamFolder = Folder::where('affiliation', 'child')->where('name', "PHOTO EQUIPE")->first();
+        if (!$existingTeamFolder) {
+            Folder::create([
+                'affiliation' => 'child',
+                'name' => "PHOTO EQUIPE",
+                'path' => "DOSSIER RACINE/PHOTO EQUIPE",
+                'folder_id' => 1,
+            ]);
+            
+            Storage::makeDirectory("public/DOSSIER RACINE/PHOTO EQUIPE");
         }
     }
 }
