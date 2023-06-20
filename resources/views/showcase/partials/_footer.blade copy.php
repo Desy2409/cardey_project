@@ -7,7 +7,7 @@
             <div class="row">
 
                 <div class="col-lg-4 col-md-6 footer-contact">
-                    <h3>Gobi#ONG</h3>
+                    <h3>CARDEY</h3>
                     <p>
                         A108 Adam Street <br>
                         New York, NY 535022<br>
@@ -73,7 +73,7 @@
 
     <div class="container footer-bottom clearfix">
         <div class="copyright">
-            &copy; Copyright <strong><span>Gobi#ONG</span></strong>. Tous droits réservés
+            &copy; Copyright <strong><span>CARDEY</span></strong>. Tous droits réservés
         </div>
         <div class="credits">Made And Designed by <a href="#" class="text-decoration-none">Desy2409</a>
         </div>

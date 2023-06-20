@@ -81,6 +81,24 @@ if (!function_exists('emailAddress')) {
 //     }
 // }
 
+if (!function_exists('showContactAddress')) {
+    function showContactAddress()
+    {
+        $repo = app(BaseRepository::class);
+        $contact = $repo->first(Contact::class);
+
+        $address = '<p>Aucune adresse configurée</p>';
+
+        if (isset($contact)) {
+            if ($contact->address != null) {
+                $address = '<p>' . $contact->address . '</p>';
+            }
+        }
+
+        return $address;
+    }
+}
+
 if (!function_exists('showContactPhone')) {
     function showContactPhone()
     {

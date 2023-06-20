@@ -1,3 +1,94 @@
+/* .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+    color: #b1785e;
+} */
+
+#header.header-scrolled, #header.header-inner-pages {
+    background: #b1785e;
+}
+
+#hero {
+    height: 70vh;
+}
+
+.team .member .social a:hover {
+    background: #b1785e;
+}
+
+/* a:hover {
+    color: #73c5eb;
+    text-decoration: none;
+} */
+
+.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+    background: #b1785e;
+}
+
+.portfolio .portfolio-item .portfolio-info {
+    background: #b1785e;
+}
+
+.back-to-top {
+    background: #b1785e;
+    opacity: 0;
+}
+
+.back-to-top:hover {
+    background: burlywood;
+    color: #fff;
+}
+
+#footer {
+    background: #b1785e;
+}
+
+.contact .php-email-form button[type="submit"] {
+    background: #b1785e;
+}
+
+.contact .info {
+    border-top: 3px solid #b1785e;
+    border-bottom: 3px solid #b1785e;
+}
+
+.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+    background: #b1785e;
+}
+.contact .info i {
+    color: #b1785e;
+}
+
+i.bi.bi-geo-alt{
+    background: burlywood;
+    color: #fff;
+}
+
+i.bi.bi-envelope{
+    background: burlywood;
+    color: #fff;
+}
+
+i.bi.bi-phone{
+    background: burlywood;
+    color: #fff;
+}
+
+.contact .php-email-form {
+    border-top: 3px solid #b1785e;
+    border-bottom: 3px solid #b1785e;
+}
+
+.section-title h2::after {
+    background: #b1785e;
+}
+
+#footer .footer-top {
+    background: beige;
+}
+
+.section-bg {
+    background-color: cornsilk;
+}
+
 #footer .footer-bottom {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -17,5 +108,17 @@
 }
 
 #footer .footer-top {
-    background: aliceblue;
+    background: wheat;
+}
+
+#footer .footer-top .social-links a {
+    background: #b1785e;
+}
+
+#footer .footer-top .social-links a:hover {
+    background: burlywood;
+}
+
+#footer .footer-top .footer-links ul i {
+    color: #b1785e;
 }

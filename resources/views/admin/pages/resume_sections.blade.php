@@ -22,14 +22,16 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label" for="id-home-first-title">Accueil titre 1 </label>
-                            <input type="text" class="form-control @error('home_first_title') is-invalid @enderror" name="home_first_title" value="{{ isset($sectionResume) ? $sectionResume->home_first_title : old('home_first_title') }}" id="id-home-first-title" placeholder="Premier titre de la page d'accueil">
+                            {{-- <input type="text" class="form-control @error('home_first_title') is-invalid @enderror" name="home_first_title" value="{{ isset($sectionResume) ? $sectionResume->home_first_title : old('home_first_title') }}" id="id-home-first-title" placeholder="Premier titre de la page d'accueil"> --}}
+                            <textarea name="home_first_title" id="" class="form-control" rows="2">@if (isset($sectionResume)) {{ $sectionResume->home_first_title }} @else {{ old('home_first_title') }} @endif</textarea>
                             @error('home_first_title')
                             <span class="invalid-feedback" role="alert">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label" for="id-home-second-title">Accueil titre 2 </label>
-                            <input type="text" class="form-control @error('home_second_title') is-invalid @enderror" name="home_second_title" value="{{ isset($sectionResume) ? $sectionResume->home_second_title : old('home_second_title') }}" id="id-home-second-title" placeholder="Deuxième titre de la page d'accueil">
+                            {{-- <input type="text" class="form-control @error('home_second_title') is-invalid @enderror" name="home_second_title" value="{{ isset($sectionResume) ? $sectionResume->home_second_title : old('home_second_title') }}" id="id-home-second-title" placeholder="Deuxième titre de la page d'accueil"> --}}
+                            <textarea name="home_second_title" id="" class="form-control" rows="2">@if (isset($sectionResume)) {{ $sectionResume->home_second_title }} @else {{ old('home_second_title') }} @endif</textarea>
                             @error('home_second_title')
                             <span class="invalid-feedback" role="alert">{{ $message }}</span>
                             @enderror
@@ -64,7 +66,7 @@
                         </div>
                         <div class="col-md-12 mb-3">
                             <label class="form-label" for="id-faq">Foire Aux Questions</label>
-                            <textarea id="id-faq" name="faq" class="form-control @error('faq') is-invalid @enderror">@if (isset($faq)) {!! $faq->faq !!} @else {!! old('faq') !!} @endif</textarea>
+                            <textarea id="id-faq" name="faq" class="form-control @error('faq') is-invalid @enderror">@if (isset($sectionResume)) {!! $sectionResume->faq !!} @else {!! old('faq') !!} @endif</textarea>
                             @error('faq')
                             <span class="invalid-feedback" role="alert">{{ $message }}</span>
                             @enderror

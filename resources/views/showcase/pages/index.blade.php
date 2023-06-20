@@ -6,7 +6,7 @@
 <head>
   @include('showcase.components._meta_tag')
   
-  <title>Arsha Bootstrap Template - Index</title>
+  <title>Accueil | CARDEY</title>
   
   @include('showcase.components._head_link')
 </head>
@@ -18,20 +18,21 @@
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
+  <section id="hero" class="d-flex align-items-center" style="background: #B1785E;">
 
     <div class="container">
-      <div class="row">
+      <div class="row mt-3">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Better Solutions For Your Business</h1>
-          <h2>We are team of talented designers making websites with Bootstrap</h2>
-          {{-- <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
-          </div> --}}
+          {{-- <h1>Better Solutions For Your Business</h1> --}}
+          <h1>@if (isset($sectionResume) && ($sectionResume->home_first_title != null)) {{ $sectionResume->home_first_title }} @else  @endif</h1>
+          <h2>@if (isset($sectionResume) && ($sectionResume->home_second_title != null)) {{ $sectionResume->home_second_title }} @else  @endif</h2>
+          {{-- <h2>We are team of talented designers making websites with Bootstrap</h2> --}}
         </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="{{ asset('theme_assets/showcase/img/hero-img.png') }}" class="img-fluid animated" alt="">
+        <div class="col-lg-2 order-1 order-lg-2">
+        </div>
+        <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          {{-- <img src="{{ asset('theme_assets/showcase/img/hero-img.png') }}" class="img-fluid animated" alt=""> --}}
+          <img src="{{ asset('customs/default_pics/13.jpg') }}" class="img-fluid animated" alt="" style="width: 80%; height: 90%; border-radius: 25%">
         </div>
       </div>
     </div>
@@ -40,41 +41,6 @@
   <!-- End Hero -->
 
   <main id="main">
-
-    <!-- ======= Cliens Section ======= -->
-    <section id="cliens" class="cliens section-bg">
-      <div class="container">
-
-        {{-- <div class="row" data-aos="zoom-in">
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ asset('theme_assets/showcase/img/clients/client-1.png') }}" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ asset('theme_assets/showcase/img/clients/client-2.png') }}" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ asset('theme_assets/showcase/img/clients/client-3.png') }}" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ asset('theme_assets/showcase/img/clients/client-4.png') }}" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ asset('theme_assets/showcase/img/clients/client-5.png') }}" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ asset('theme_assets/showcase/img/clients/client-6.png') }}" class="img-fluid" alt="">
-          </div>
-
-        </div> --}}
-
-      </div>
-    </section><!-- End Cliens Section -->
 
     <!-- ======= About Us Section ======= -->
     @include('showcase.pages.sections._about')
@@ -93,21 +59,8 @@
     <!-- End Services Section -->
 
     <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="row">
-          <div class="col-lg-9 text-center text-lg-start">
-            <h3>Call To Action</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Cta Section -->
+    {{-- @include('showcase.pages.sections._cta') --}}
+    <!-- End Cta Section -->
 
     <!-- ======= Portfolio Section ======= -->
     @include('showcase.pages.sections._gallery')
@@ -136,10 +89,12 @@
   <!-- End Footer -->
 
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="{{ route('show.index') }}#hero" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 
   @include('showcase.components._body_js_link')
+
+  @include('showcase.components._custom_body_js_link')
 
 </body>
 

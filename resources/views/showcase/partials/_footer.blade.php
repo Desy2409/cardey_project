@@ -7,7 +7,7 @@
             <div class="row">
 
                 <div class="col-lg-4 col-md-6 footer-contact">
-                    <h3>Gobi#ONG</h3>
+                    <h3>CARDEY</h3>
                     @if (isset($contact) && $contact->address != null) {!! $contact->address !!} <br><br> @endif
                     <p>
                         <strong>Téléphone :</strong> {!! showFooterPhone() !!} 
@@ -50,7 +50,15 @@
 
                 <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Nos réseaux sociaux</h4>
-                    @if (isset($about))
+                    @if (isset($about) && $about->resume != null) {!! $about->resume !!} @endif
+                    <div class="social-links mt-3">
+                        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                      </div>
+                    {{-- @if (isset($about))
                     @if ($about->resume)
                     {!! $about->resume !!}
                     @endif
@@ -74,7 +82,7 @@
                         <a href="{{ $about->whatsapp }}" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
                         @endif
                     </div>
-                    @endif
+                    @endif --}}
                 </div>
             </div>
         </div>
@@ -82,7 +90,7 @@
 
     <div class="container footer-bottom clearfix">
         <div class="copyright">
-            &copy; Copyright <strong><span>Gobi#ONG</span></strong>. Tous droits réservés
+            &copy; Copyright <strong><span>CARDEY</span></strong>. Tous droits réservés
         </div>
         <div class="credits">Made And Designed by <a href="#" class="text-decoration-none">Desy2409</a>
         </div>

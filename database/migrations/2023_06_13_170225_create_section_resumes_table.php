@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('section_resumes', function (Blueprint $table) {
             $table->id();
-            $table->text('home_first_title');
-            $table->text('home_second_title');
+            $table->text('home_first_title')->nullable();
+            $table->text('home_second_title')->nullable();
             // $table->text('about');
             // $table->text('contact');
-            $table->text('gallery');
-            $table->text('team');
-            $table->text('faq');
+            $table->text('gallery')->nullable();
+            $table->text('team')->nullable();
+            $table->text('faq')->nullable();
             // $table->text('social');
             $table->timestamps();
             $table->foreignId('user_create_id')->nullable()->constrained('users');

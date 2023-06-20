@@ -23,7 +23,7 @@
                         {{-- <img id="previewImage" class="" src="#" alt="Image Preview" style="width: 30%; height: 90%; border-radius: 50%;"> --}}
                     <div id="rowPreview" class="row text-center d-none" style="height: 90%;">
                         <div class="col-md-12">
-                            <img id="previewImage" class="" src="#" alt="Image Preview" style="width: 30%; border-radius: 50% !important;">
+                            <img id="previewImage" class="" src="#" alt="Image Preview" style="width: 200px; height: 200px; border-radius: 50% !important;">
                         </div>
                     </div>
                     <div class="row mb-3 mt-2">

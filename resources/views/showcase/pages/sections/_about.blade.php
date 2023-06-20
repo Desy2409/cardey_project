@@ -15,13 +15,13 @@
                 {!! $about->about_section_2 !!}
             </div>
             @else
-            @if ($about->about_section_1 != null)
-            <div class="col-lg-6">
+            @if ($about->about_section_1 != null && $about->about_section_2 == null)
+            <div class="col-lg-12">
                 {!! $about->about_section_1 !!}
             </div>
             @endif
-            @if ($about->about_section_2 != null)
-            <div class="col-lg-6">
+            @if ($about->about_section_1 == null && $about->about_section_2 != null)
+            <div class="col-lg-12">
                 {!! $about->about_section_2 !!}
             </div>
             @endif

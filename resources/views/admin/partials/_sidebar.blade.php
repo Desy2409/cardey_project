@@ -10,7 +10,7 @@
       c0.2,0.5,0,1.1-0.5,1.3l-9,4C10.3,20,10.1,20,10,20z" />
             </svg>
 
-            <span class="align-middle me-3">Gobi#ONG</span>
+            <span class="align-middle me-3">CARDEY</span>
         </a>
 
         <ul class="sidebar-nav">

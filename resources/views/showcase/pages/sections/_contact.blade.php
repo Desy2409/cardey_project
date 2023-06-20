@@ -13,9 +13,10 @@
                 <div class="info">
                     <div class="address">
                         <i class="bi bi-geo-alt"></i>
-                        <h4>Location:</h4>
+                        <h4>Adresse:</h4>
                         {{-- <p>A108 Adam Street, New York, NY 535022</p> --}}
-                        <p>@if (isset($contact) && $contact->address != null) {!! $contact->address !!} @endif</p>
+                        {{-- <p>@if (isset($contact) && $contact->address != null) {!! $contact->address !!} @endif</p> --}}
+                        {!! showContactAddress() !!}
                     </div>
 
                     <div class="email">

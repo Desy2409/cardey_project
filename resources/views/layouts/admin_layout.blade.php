@@ -5,7 +5,7 @@
 <head>
     @include('admin.components._meta_tags')
 
-    <title>Gobi#ONG | @yield('page-title')</title>
+    <title>CARDEY | @yield('page-title')</title>
 
     @include('admin.components._head_link')
 
