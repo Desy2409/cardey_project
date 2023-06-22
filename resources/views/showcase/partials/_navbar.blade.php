@@ -1,9 +1,9 @@
 <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-        <h1 class="logo me-auto"><a href="{{ route('show.index') }}#hero">CARDEY</a></h1>
+        <a href="#hero" class="logo me-3"><img src="{{ asset('customs/default_pics/1.png') }}" alt="" class="img-fluid" style="border-radius: 25%"></a>
+        <h1 class="logo me-auto"><a href="{{ route('show.index') }}#hero">Association CARDEY</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
         <nav id="navbar" class="navbar">
             <ul>

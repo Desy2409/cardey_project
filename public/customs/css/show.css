@@ -77,6 +77,10 @@ i.bi.bi-phone{
     border-bottom: 3px solid #b1785e;
 }
 
+.contact .php-email-form button[type="submit"]:hover {
+    background: burlywood;
+}
+
 .section-title h2::after {
     background: #b1785e;
 }

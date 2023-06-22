@@ -32,7 +32,8 @@
         </div>
         <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
           {{-- <img src="{{ asset('theme_assets/showcase/img/hero-img.png') }}" class="img-fluid animated" alt=""> --}}
-          <img src="{{ asset('customs/default_pics/13.jpg') }}" class="img-fluid animated" alt="" style="width: 80%; height: 90%; border-radius: 25%">
+          {{-- <img src="{{ asset('customs/default_pics/13.jpg') }}" class="img-fluid animated" alt="" style="width: 80%; height: 90%; border-radius: 25%"> --}}
+          <img src="{{ asset('customs/default_pics/1.jpg') }}" class="img-fluid animated" alt="" style="width: 80%; height: 90%; border-radius: 25%">
         </div>
       </div>
     </div>

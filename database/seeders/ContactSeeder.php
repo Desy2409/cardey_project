@@ -22,7 +22,7 @@ class ContactSeeder extends Seeder
                 'latitude' => "",
                 'address' => "",
                 'email' => "Associationcardey@gmail.com",
-                'phone' => "+228 90 13 50 36",
+                'phone' => "+228 70 83 99 61;+228 98 19 63 24",
                 'resume' => "",
             ]);
         }

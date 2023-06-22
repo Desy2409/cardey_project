@@ -10,7 +10,7 @@
             </div>
             <div class="col-6 text-end">
                 <p class="mb-0">
-                    &copy; @php echo date('Y'); @endphp - <a href="#" class="text-decoration-none text-muted">CARDEY</a>
+                    &copy; @php echo date('Y'); @endphp - <a href="#" class="text-decoration-none text-muted">Association CARDEY</a>
                 </p>
             </div>
         </div>
