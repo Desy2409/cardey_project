@@ -1,6 +1,9 @@
 <!-- Favicons -->
-<link href="{{ asset('theme_assets/showcase/img/favicon.png') }}" rel="icon">
-<link href="{{ asset('theme_assets/showcase/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+{{-- <link href="{{ asset('theme_assets/showcase/img/favicon.png') }}" rel="icon"> --}}
+{{-- <link href="{{ asset('theme_assets/showcase/img/apple-touch-icon.png') }}" rel="apple-touch-icon"> --}}
+<link href="{{ asset('customs/default_pics/1.png') }}" rel="icon">
+{{-- <link href="{{ asset('theme_assets/admin/img/favicon.png') }}" rel="icon">
+<link href="{{ asset('theme_assets/admin/img/logo.png') }}" rel="logo"> --}}
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">

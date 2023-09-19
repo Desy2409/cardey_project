@@ -3,28 +3,7 @@
         "matricule": "2409SSACARDEY#ADMIN",
         "lastname": "SUPER",
         "firstname": "Super Admin",
-        "email": "super.admin@domain.tg",
+        "email": "admin@cardey.tg",
         "password": "P@ssw0rd#"
-    },
-    {
-        "matricule": "2409SACARDEY#ADMIN",
-        "lastname": "SUPER",
-        "firstname": "Admin",
-        "email": "admin@domain.tg",
-        "password": "Pass2023"
-    },
-    {
-        "matricule": "2409ATCARDEY#ALPHA",
-        "lastname": "ALPHA",
-        "firstname": "Test",
-        "email": "alpha@domain.tg",
-        "password": "Alpha2023"
-    },
-    {
-        "matricule": "2409BTCARDEY#BRAVO",
-        "lastname": "Bravo",
-        "firstname": "Test",
-        "email": "bravo@domain.tg",
-        "password": "Bravo2023"
     }
 ]

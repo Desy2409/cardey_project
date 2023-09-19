@@ -20,9 +20,9 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-img"><img src="{{ asset('customs/default_pics/2.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>App 1</h4>
+                    <h4>Image 1</h4>
                     {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/2.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-search ms-5"></i></a>
+                    <a href="{{ asset('customs/default_pics/2.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search ms-5"></i></a>
                     {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
                 </div>
             </div>
@@ -40,9 +40,9 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-img"><img src="{{ asset('customs/default_pics/3.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>App 2</h4>
+                    <h4>Image 2</h4>
                     {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/3.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-search"></i></a>
+                    <a href="{{ asset('customs/default_pics/3.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Image 2"><i class="bx bx-search"></i></a>
                     {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
                 </div>
             </div>
@@ -50,9 +50,9 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-img"><img src="{{ asset('customs/default_pics/4.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>App 2</h4>
+                    <h4>Image 3</h4>
                     {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/4.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-search"></i></a>
+                    <a href="{{ asset('customs/default_pics/4.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
                     {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
                 </div>
             </div>
@@ -60,9 +60,9 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-img"><img src="{{ asset('customs/default_pics/5.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>App 2</h4>
+                    <h4>Image 4</h4>
                     {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/5.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-search"></i></a>
+                    <a href="{{ asset('customs/default_pics/5.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
                     {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
                 </div>
             </div>
@@ -70,9 +70,9 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-img"><img src="{{ asset('customs/default_pics/6.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>App 2</h4>
+                    <h4>Image 5</h4>
                     {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/6.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-search"></i></a>
+                    <a href="{{ asset('customs/default_pics/6.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
                     {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
                 </div>
             </div>
@@ -80,9 +80,9 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-img"><img src="{{ asset('customs/default_pics/7.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>App 2</h4>
+                    <h4>Image 6</h4>
                     {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/7.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-search"></i></a>
+                    <a href="{{ asset('customs/default_pics/7.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
                     {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
                 </div>
             </div>
@@ -90,9 +90,9 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-img"><img src="{{ asset('customs/default_pics/8.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>App 2</h4>
+                    <h4>Image 7</h4>
                     {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/8.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-search"></i></a>
+                    <a href="{{ asset('customs/default_pics/8.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
                     {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
                 </div>
             </div>
@@ -100,9 +100,9 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-img"><img src="{{ asset('customs/default_pics/9.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>App 2</h4>
+                    <h4>Image 8</h4>
                     {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/9.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-search"></i></a>
+                    <a href="{{ asset('customs/default_pics/9.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
                     {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
                 </div>
             </div>
@@ -110,9 +110,9 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-img"><img src="{{ asset('customs/default_pics/10.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>App 2</h4>
+                    <h4>Image 9</h4>
                     {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/10.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-search"></i></a>
+                    <a href="{{ asset('customs/default_pics/10.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
                     {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
                 </div>
             </div>
@@ -120,9 +120,9 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-img"><img src="{{ asset('customs/default_pics/11.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>App 2</h4>
+                    <h4>Image 10</h4>
                     {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/11.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-search"></i></a>
+                    <a href="{{ asset('customs/default_pics/11.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
                     {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
                 </div>
             </div>
@@ -130,9 +130,9 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-img"><img src="{{ asset('customs/default_pics/12.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>App 2</h4>
+                    <h4>Image 11</h4>
                     {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/12.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-search"></i></a>
+                    <a href="{{ asset('customs/default_pics/12.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
                     {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
                 </div>
             </div>
@@ -140,9 +140,9 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-img"><img src="{{ asset('customs/default_pics/13.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>App 2</h4>
+                    <h4>Image 12</h4>
                     {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/13.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-search"></i></a>
+                    <a href="{{ asset('customs/default_pics/13.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
                     {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
                 </div>
             </div>
@@ -150,9 +150,9 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-img"><img src="{{ asset('customs/default_pics/14.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>App 2</h4>
+                    <h4>Image 13</h4>
                     {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/14.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-search"></i></a>
+                    <a href="{{ asset('customs/default_pics/14.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
                     {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
                 </div>
             </div>
@@ -160,9 +160,9 @@
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-img"><img src="{{ asset('customs/default_pics/15.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>App 2</h4>
+                    <h4>Image 14</h4>
                     {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/15.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-search"></i></a>
+                    <a href="{{ asset('customs/default_pics/15.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
                     {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
                 </div>
             </div>

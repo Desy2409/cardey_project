@@ -24,7 +24,7 @@
       <div class="row mt-3">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
           {{-- <h1>Better Solutions For Your Business</h1> --}}
-          <h1>@if (isset($sectionResume) && ($sectionResume->home_first_title != null)) {{ $sectionResume->home_first_title }} @else  @endif</h1>
+          <h2>@if (isset($sectionResume) && ($sectionResume->home_first_title != null)) {{ $sectionResume->home_first_title }} @else  @endif</h2>
           <h2>@if (isset($sectionResume) && ($sectionResume->home_second_title != null)) {{ $sectionResume->home_second_title }} @else  @endif</h2>
           {{-- <h2>We are team of talented designers making websites with Bootstrap</h2> --}}
         </div>

@@ -18,8 +18,8 @@ class SectionResumeSeeder extends Seeder
         $existingSectionResume = SectionResume::first();
         if (!$existingSectionResume) {
             SectionResume::create([
-                'home_first_title' => "Phrase d'accroche première de l'Association CARDEY",
-                'home_second_title' => "Phrase d'accroche n°2 de l'Association CARDEY",
+                'home_first_title' => "L'équipe de CARDEY pour le Soutien des Orphelins, des enfants démunis et toutes personnes Vulnérables...",
+                'home_second_title' => '',//"Phrase d'accroche n°2 de l'Association CARDEY",
                 'gallery' => "",
                 'team' => "",
                 'faq' => "",
