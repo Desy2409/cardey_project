@@ -4,7 +4,7 @@
         <div class="section-title">
             <h2>Gallerie</h2>
             @if (isset($sectionResume) && $sectionResume->gallery != null)
-            {!! $sectionResume->gallery !!}
+                {!! $sectionResume->gallery !!}
             @endif
         </div>
 
@@ -15,219 +15,104 @@
             {{-- <li data-filter=".filter-web">Web</li> --}}
         </ul>
 
+        <div>
+            <p class="text-center">
+                🎁 NOËL POUR TOUS 🎄
+
+                <span>😃 Retour sur images de la journée du 23 Décembre 2021. 🎉Un moment spécial de partages avec les chaleureux enfants du village 🏠 ADOUGBELAN (Préfecture de l'OGOU).</span>
+                <span>Une journée ✨ aucours de laquelle la magie 🎄de Noël a une fois encore permis de célébrer les enfants et de faire germer plus de joie dans leurs coeurs 😊</span><br>
+                <span>▪️Merci à tous ceux qui ont contribué de par leurs présences et aux autorités de la place</span><br>
+                <span>▪️Merci à tous ces enfants pour le retour en amour </span><br>
+                <span>▪️Merci CARDEY</span><br>
+                <span class="text-primary">
+                    #noel #kidparty #noelpourtous #cadeau #joyeuxnoel #atakpame #ogou #togo #ong #association #cardey
+                </span>
+            </p>
+        </div>
+
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/2.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Image 1</h4>
-                    {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/2.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search ms-5"></i></a>
-                    {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-            </div>
-
-            {{-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-img"><img src="{{ asset('theme_assets/showcase/img/portfolio/portfolio-2.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Web 3</h4>
-                    <p>Web</p>
-                    <a href="{{ asset('theme_assets/showcase/img/portfolio/portfolio-2.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-search"></i></a>
-                    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-            </div> --}}
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/3.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Image 2</h4>
-                    {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/3.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Image 2"><i class="bx bx-search"></i></a>
-                    {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/4.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Image 3</h4>
-                    {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/4.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
-                    {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/5.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Image 4</h4>
-                    {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/5.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
-                    {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/6.jpg') }}" class="img-fluid" alt=""></div>
+                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/1/1_5.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
                     <h4>Image 5</h4>
-                    {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/6.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
-                    {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
+                    <a href="{{ asset('customs/default_pics/1/1_5.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search ms-5"></i></a>
                 </div>
             </div>
-
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/7.jpg') }}" class="img-fluid" alt=""></div>
+                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/1/1_1.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>Image 6</h4>
-                    {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/7.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
-                    {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
+                    <h4>Image 1</h4>
+                    <a href="{{ asset('customs/default_pics/1/1_1.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search ms-5"></i></a>
                 </div>
             </div>
-
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/8.jpg') }}" class="img-fluid" alt=""></div>
+                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/1/1_2.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>Image 7</h4>
-                    {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/8.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
-                    {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
+                    <h4>Image 2</h4>
+                    <a href="{{ asset('customs/default_pics/1/1_2.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search ms-5"></i></a>
                 </div>
             </div>
-
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/9.jpg') }}" class="img-fluid" alt=""></div>
+                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/1/1_3.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>Image 8</h4>
-                    {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/9.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
-                    {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
+                    <h4>Image 3</h4>
+                    <a href="{{ asset('customs/default_pics/1/1_3.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search ms-5"></i></a>
                 </div>
             </div>
-
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/10.jpg') }}" class="img-fluid" alt=""></div>
+                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/1/1_4.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
-                    <h4>Image 9</h4>
-                    {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/10.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
-                    {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
+                    <h4>Image 4</h4>
+                    <a href="{{ asset('customs/default_pics/1/1_4.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search ms-5"></i></a>
                 </div>
             </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/11.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Image 10</h4>
-                    {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/11.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
-                    {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/12.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Image 11</h4>
-                    {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/12.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
-                    {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/13.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Image 12</h4>
-                    {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/13.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
-                    {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/14.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Image 13</h4>
-                    {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/14.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
-                    {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/15.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Image 14</h4>
-                    {{-- <p>App</p> --}}
-                    <a href="{{ asset('customs/default_pics/15.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search"></i></a>
-                    {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
-                </div>
-            </div>
-
-            {{-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-img"><img src="{{ asset('theme_assets/showcase/img/portfolio/portfolio-4.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Card 2</h4>
-                    <p>Card</p>
-                    <a href="{{ asset('theme_assets/showcase/img/portfolio/portfolio-4.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-search"></i></a>
-                    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-            </div> --}}
-
-            {{-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-img"><img src="{{ asset('theme_assets/showcase/img/portfolio/portfolio-5.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Web 2</h4>
-                    <p>Web</p>
-                    <a href="{{ asset('theme_assets/showcase/img/portfolio/portfolio-5.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-search"></i></a>
-                    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-            </div> --}}
-
-            {{-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('theme_assets/showcase/img/portfolio/portfolio-6.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>App 3</h4>
-                    <p>App</p>
-                    <a href="{{ asset('theme_assets/showcase/img/portfolio/portfolio-6.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-search"></i></a>
-                    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-            </div> --}}
-
-            {{-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-img"><img src="{{ asset('theme_assets/showcase/img/portfolio/portfolio-7.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Card 1</h4>
-                    <p>Card</p>
-                    <a href="{{ asset('theme_assets/showcase/img/portfolio/portfolio-7.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-search"></i></a>
-                    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-            </div> --}}
-
-            {{-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-img"><img src="{{ asset('theme_assets/showcase/img/portfolio/portfolio-8.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Card 3</h4>
-                    <p>Card</p>
-                    <a href="{{ asset('theme_assets/showcase/img/portfolio/portfolio-8.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-search"></i></a>
-                    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-            </div> --}}
-
-            {{-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-img"><img src="{{ asset('theme_assets/showcase/img/portfolio/portfolio-9.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Web 3</h4>
-                    <p>Web</p>
-                    <a href="{{ asset('theme_assets/showcase/img/portfolio/portfolio-9.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-search"></i></a>
-                    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-            </div> --}}
 
         </div>
 
+        <div>
+            <p class="text-center">
+                NOËL POUR TOUS à Hahotoe (orphelinat Blessing)
+
+                <span>le 24 décembre 2022, en collabation avec son équipe le père Noël a déposé de l'association CARDEY à déposé ses valises dans l'enceinte de l'orphelinat Blessing à hahotoe.</span>
+                <span>Entouré de ses enfants magnifique, la magie de Noël à encore fait ses preuves en donnant le sourir à chaque enfant à travers les cadeaux et des vivres pour une magnifique fête de Noël à tous.</span>
+                <span>Un moment de partage de joie, de danses qui a marqué plus de quatre vingt enfants y compris les responsables de l'orphelinat.</span><br>
+
+                <span class="text-primary">*#NOEL POUR TOUS MERCI CARDEY ET SES PARTENAIRES *#</span>
+            </p>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/2/1_1.jpg') }}" class="img-fluid" alt=""></div>
+                <div class="portfolio-info">
+                    <h4>Image 6</h4>
+                    <a href="{{ asset('customs/default_pics/2/1_1.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search ms-5"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/2/1_2.jpg') }}" class="img-fluid" alt=""></div>
+                <div class="portfolio-info">
+                    <h4>Image 7</h4>
+                    <a href="{{ asset('customs/default_pics/2/1_2.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search ms-5"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/2/1_3.jpg') }}" class="img-fluid" alt=""></div>
+                <div class="portfolio-info">
+                    <h4>Image 8</h4>
+                    <a href="{{ asset('customs/default_pics/2/1_3.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search ms-5"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <p class="text-center">
+                Vison Education CARDEY en milieu rural..
+
+                Ayant pour l'un des objectifs de soutenir l'education des enfants vulnerables tout en faisant la promotion de l'excellence en milieu rural, nous nous sommes rendu à FETIGBÉ ,
+                un village situé à 40kilomètre de la ville d'Atakpamé dans la region des plateaux pour partager des fournitures Scolaire à tous les éleves de l'Ecole primaire catholique de fétigbé en présence du chef du village , la comité des parents d'éleves, le directeur et les professeurs.
+                Merci à tous ceux qui ont participés de près et de loin pour que cette action soit éffective. Special remerciement à notre partenaire ONG unsealthethruth.
+            </p>
+        </div>
     </div>
 </section>
