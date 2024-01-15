@@ -16,27 +16,39 @@ class FolderSeeder extends Seeder
      */
     public function run()
     {
-        $existingRootFolder = Folder::where('affiliation', 'parent')->where('name', "DOSSIER RACINE")->first();
+        $existingRootFolder = Folder::where('affiliation', 'parent')->where('name', "CARDEY_TOGO")->first();
         if (!$existingRootFolder) {
             Folder::create([
                 'affiliation' => 'parent',
-                'name' => "DOSSIER RACINE",
-                'path' => "DOSSIER RACINE",
+                'name' => "CARDEY_TOGO",
+                'path' => "CARDEY_TOGO",
             ]);
             
-            Storage::makeDirectory("public/DOSSIER RACINE");
+            Storage::makeDirectory("public/CARDEY_TOGO");
         }
 
-        $existingTeamFolder = Folder::where('affiliation', 'child')->where('name', "PHOTO EQUIPE")->first();
+        $existingTeamFolder = Folder::where('affiliation', 'child')->where('name', "PHOTO_EQUIPE")->first();
         if (!$existingTeamFolder) {
             Folder::create([
                 'affiliation' => 'child',
-                'name' => "PHOTO EQUIPE",
-                'path' => "DOSSIER RACINE/PHOTO EQUIPE",
+                'name' => "PHOTO_EQUIPE",
+                'path' => "CARDEY_TOGO/PHOTO_EQUIPE",
                 'folder_id' => 1,
             ]);
             
-            Storage::makeDirectory("public/DOSSIER RACINE/PHOTO EQUIPE");
+            Storage::makeDirectory("public/CARDEY_TOGO/PHOTO_EQUIPE");
+        }
+
+        $existingGalleryFolder = Folder::where('affiliation', 'child')->where('name', "GALERIE")->first();
+        if (!$existingGalleryFolder) {
+            Folder::create([
+                'affiliation' => 'child',
+                'name' => "GALERIE",
+                'path' => "CARDEY_TOGO/GALERIE",
+                'folder_id' => 1,
+            ]);
+            
+            Storage::makeDirectory("public/CARDEY_TOGO/GALERIE");
         }
     }
 }

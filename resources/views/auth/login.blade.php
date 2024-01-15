@@ -10,12 +10,12 @@
         <!--/.bg-holder-->
         <div class="position-relative px-4 px-lg-7 pt-7 pb-7 pb-sm-5 text-center text-md-start pb-lg-7 pb-md-7">
             <h3 class="mb-3 text-black fs-1">CARDEY</h3>
-            <p class="text-700">Les soumissions à nos appels d'offre se font désormais sur notre plateforme !!!</p>
+            {{-- <p class="text-700">Les soumissions à nos appels d'offre se font désormais sur notre plateforme !!!</p>
             <ul class="list-unstyled mb-0 w-max-content w-md-auto mx-auto">
                 <li class="d-flex align-items-center"><span class="uil uil-check-circle text-success me-2"></span><span class="text-700 fw-semi-bold">Plus simple</span></li>
                 <li class="d-flex align-items-center"><span class="uil uil-check-circle text-success me-2"></span><span class="text-700 fw-semi-bold">Plus rapide</span></li>
                 <li class="d-flex align-items-center"><span class="uil uil-check-circle text-success me-2"></span><span class="text-700 fw-semi-bold">Plus fiable</span></li>
-            </ul>
+            </ul> --}}
         </div>
         <div class="position-relative z-index--1 mb-6 d-none d-md-block text-center mt-md-15"><img class="auth-title-box-img d-dark-none" src="{{ asset('customs/img/logo.png') }}" alt="" /><img class="auth-title-box-img d-light-none" src="{{ asset('theme_assets/auth/img/spot-illustrations/auth-dark.png') }}" alt="" /></div>
     </div>
@@ -40,7 +40,7 @@
                     <div class="mb-3 text-start">
                         <label class="form-label" for="email">Adresse email</label>
                         <div class="form-icon-container">
-                            <input name="email" class="form-control form-icon-input @error('email') is-invalid @enderror" value="{{ old('email') }}" id="email" type="email" placeholder="username@totalenergies.tg" />
+                            <input name="email" class="form-control form-icon-input @error('email') is-invalid @enderror" value="{{ old('email') }}" id="email" type="email" placeholder="username@cardey.tg" />
                             <span class="fas fa-envelope text-900 fs--1 form-icon"></span>
                         </div>
                         @error('email')

@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Models\Gallery;
 
 class BaseRepository
 {
@@ -31,6 +32,11 @@ class BaseRepository
     public function firstThree($model, $column1, $value1, $column2, $value2, $column3, $value3)
     {
         return $model::where($column1, $value1)->where($column2, $value2)->where($column3, $value3)->whereNull('deleted_at')->first();
+    }
+
+    public function last($model)
+    {
+        return $model::whereNull('deleted_at')->latest()->first();
     }
 
     public function lastOne($model, $column, $value)
@@ -83,17 +89,36 @@ class BaseRepository
         return $model::orderBy($column1, $order1)->orderBy($column2, $order2)->orderBy($column3, $order3)->whereNull('deleted_at')->get();
     }
 
+    public function selectAllOrderByNotDeleted($model, $column, $order)
+    {
+        return $model::orderBy($column, $order)->whereNull('deleted_at')->get();
+    }
+
+    public function selectAllByOneOrderByNotDeleted($model, $column, $value, $order_column, $order)
+    {
+        return $model::where($column, $value)->orderBy($order_column, $order)->whereNull('deleted_at')->get();
+    }
+
+    public function selectAllByOneOrderByNotDeletedGallery()
+    {
+        return Gallery::where('user_publish_id', '!=', null)->where('user_archive_id', null)->orderBy('published_at', 'desc')->whereNull('deleted_at')->get();
+    }
+
+    public function selectAllByTwoOrderByNotDeleted($model, $column1, $value1, $column2, $value2, $order_column, $order)
+    {
+        return $model::where($column1, $value1)->where($column2, $value2)->orderBy($order_column, $order)->whereNull('deleted_at')->get();
+    }
 
     // SELECT LIKE
     public function selectOneStartWithByOne($model, $column, $value, $like_column, $like_value)
     {
         // dd($model::where($column, $value)->where($like_column, 'like', '%', $like_value)->first());
-        return $model::where($column, $value)->where($like_column, 'like', $like_value.'%')->whereNull('deleted_at')->first();
+        return $model::where($column, $value)->where($like_column, 'like', $like_value . '%')->whereNull('deleted_at')->first();
     }
     public function selectOneStartWithByTwo($model, $column1, $value1, $column2, $value2, $like_column, $like_value)
     {
         // dd($model::where($column1, $value1)->where($column2, $value2)->where($like_column, 'like', $like_value.'%')->first());
-        return $model::where($column1, $value1)->where($column2, $value2)->where($like_column, 'like', $like_value.'%')->whereNull('deleted_at')->first();
+        return $model::where($column1, $value1)->where($column2, $value2)->where($like_column, 'like', $like_value . '%')->whereNull('deleted_at')->first();
     }
 
 

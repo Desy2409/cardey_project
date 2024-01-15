@@ -46,7 +46,7 @@ class TeamController extends Controller
     public function store(Request $request)
     {
         // dd('store');
-        // $this->storeValidations($request);
+        $this->storeValidations($request);
         // $this->validations($request);
         // dd('stop');
         try {
@@ -68,8 +68,8 @@ class TeamController extends Controller
             // Upload de la photo de profil
             if ($photoProfile) {
                 // dd('enter===');
-                // $teamFolder = Folder::where('affiliation', 'parent')->where('name', "PHOTO EQUIPE")->first();
-                $teamFolder = $this->repo->firstTwo(Folder::class, 'affiliation', 'child', 'name', 'PHOTO EQUIPE');
+                // $teamFolder = Folder::where('affiliation', 'parent')->where('name', "PHOTO_EQUIPE")->first();
+                $teamFolder = $this->repo->firstTwo(Folder::class, 'affiliation', 'child', 'name', 'PHOTO_EQUIPE');
                 $photoProfileFileUpload = $this->fileUtil->storeFile($team, $photoProfile, 'profile-' . rand(0, 500), $teamFolder);
             }
 

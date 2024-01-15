@@ -9,7 +9,7 @@ class FileUtil
 {
 
 
-    public function storeFile($entity, $file, $personalizedFilename = null, $folder)
+    public function storeFile($entity, $file, $personalizedFilename = null, $folder, $gallery_id = null)
     {
         // dd('storeFile');
         try {
@@ -32,7 +32,8 @@ class FileUtil
                 "personalized_filename" => $personalizedFilename,
                 "folder_id" => $folder->id,
                 "fileable_type" => get_class($entity),
-                "fileable_id" => $entity->id
+                "fileable_id" => $entity->id,
+                "gallery_id" => $gallery_id
             ]);
 
             // dd('3');

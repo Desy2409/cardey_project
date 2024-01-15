@@ -2,6 +2,7 @@
 
 use App\Models\Contact;
 use App\Models\FileUpload;
+use App\Models\Gallery;
 use App\Models\Team;
 use App\Repositories\BaseRepository;
 
@@ -221,5 +222,28 @@ if (!function_exists('profilePic')) {
 
         // dd($file);
         return $file;
+    }
+}
+
+if (!function_exists('showGalleryStatus')) {
+    function showGalleryStatus($id)
+    {
+        $repo = app(BaseRepository::class);
+
+        $gallery = $repo->findOrFail(Gallery::class, $id);
+    }
+}
+
+if (!function_exists('uploadFiles')) {
+    function uploadFiles($id)
+    {
+        $repo = app(BaseRepository::class);
+
+        // $files = $repo->selectAllTwo(FileUpload::class, 'fileable_type', 'App\Models\Gallery', 'fileable_id', $id);
+
+        // $files = FileUpload::join('galleries','file_uploads.')
+        // where('fileable_type', 'App\Models\Gallery')->where('fileable_id', $id);
+
+        return $files;
     }
 }

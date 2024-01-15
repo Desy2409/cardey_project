@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminControllers\DashboardController;
 use App\Http\Controllers\AdminControllers\DefaultConfigController;
 use App\Http\Controllers\AdminControllers\FaqController;
 use App\Http\Controllers\AdminControllers\ContactController;
+use App\Http\Controllers\AdminControllers\FolderController;
 use App\Http\Controllers\AdminControllers\GalleryController;
 use App\Http\Controllers\AdminControllers\PostController;
 use App\Http\Controllers\AdminControllers\ResumeSectionController;
@@ -78,11 +79,14 @@ Route::prefix('administration')->group(function () {
 
     // GALLERY
     Route::get('gallerie/{id?}', [GalleryController::class, 'index'])->name('gallery.index');
+    Route::get('/gallerie/{id}/detail', [GalleryController::class, 'show'])->name('gallery.show');
     Route::post('/gallerie', [GalleryController::class, 'store'])->name('gallery.store');
     Route::patch('/gallerie/{id}/modification', [GalleryController::class, 'update'])->name('gallery.update');
     Route::delete('/gallerie/{id}/suppression', [GalleryController::class, 'destroy'])->name('gallery.destroy');
     Route::get('gallerie-photos-supprimees', [GalleryController::class, 'trash'])->name('gallery.trash');
     Route::patch('/gallerie/{id}/restauration', [GalleryController::class, 'restore'])->name('gallery.restore');
+    Route::patch('/gallerie/{id}/publication', [GalleryController::class, 'publish'])->name('gallery.publish');
+    Route::patch('/gallerie/{id}/archivage', [GalleryController::class, 'archive'])->name('gallery.archive');
 
     // Route::get('foire-aux-questions', [FaqController::class, 'index'])->name('faq.index');
     // Route::post('/foire-aux-questions', [FaqController::class, 'store'])->name('faq.store');

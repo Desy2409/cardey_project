@@ -9,13 +9,39 @@
         </div>
 
         <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">Toutes les photos</li>
+            {{-- <li data-filter="*" class="filter-active">Toutes les photos</li> --}}
             {{-- <li data-filter=".filter-app">App</li> --}}
             {{-- <li data-filter=".filter-card">Card</li> --}}
             {{-- <li data-filter=".filter-web">Web</li> --}}
         </ul>
 
-        <div>
+        @if (!empty($galleries) && sizeof($galleries) > 0)
+            @foreach ($galleries as $gallery)
+                <div class="mb-3">
+                    {{-- <p class="text-center"> --}}
+                    {!! $gallery->text_message !!}
+                    {{-- </p> --}}
+                </div>
+                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+                    @if (!empty($gallery->fileUploads) && sizeof($gallery->fileUploads) > 0)
+                        @php
+                            $i = 1;
+                        @endphp
+                        @foreach ($gallery->fileUploads as $file)
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                                <div class="portfolio-img"><img src="{{ asset($file->src) }}" class="img-fluid" alt=""></div>
+                                <div class="portfolio-info">
+                                    <h4>Image {{ $i++ }}</h4>
+                                    <a href="{{ asset($file->src) }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search ms-5"></i></a>
+                                </div>
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
+            @endforeach
+        @endif
+
+        {{-- <div>
             <p class="text-center">
                 🎁 NOËL POUR TOUS 🎄
 
@@ -28,9 +54,9 @@
                     #noel #kidparty #noelpourtous #cadeau #joyeuxnoel #atakpame #ogou #togo #ong #association #cardey
                 </span>
             </p>
-        </div>
+        </div> --}}
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+        {{-- <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-img"><img src="{{ asset('customs/default_pics/1/1_5.jpg') }}" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
@@ -67,52 +93,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> --}}
 
-        <div>
-            <p class="text-center">
-                NOËL POUR TOUS à Hahotoe (orphelinat Blessing)
-
-                <span>le 24 décembre 2022, en collabation avec son équipe le père Noël a déposé de l'association CARDEY à déposé ses valises dans l'enceinte de l'orphelinat Blessing à hahotoe.</span>
-                <span>Entouré de ses enfants magnifique, la magie de Noël à encore fait ses preuves en donnant le sourir à chaque enfant à travers les cadeaux et des vivres pour une magnifique fête de Noël à tous.</span>
-                <span>Un moment de partage de joie, de danses qui a marqué plus de quatre vingt enfants y compris les responsables de l'orphelinat.</span><br>
-
-                <span class="text-primary">*#NOEL POUR TOUS MERCI CARDEY ET SES PARTENAIRES *#</span>
-            </p>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/2/1_1.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Image 6</h4>
-                    <a href="{{ asset('customs/default_pics/2/1_1.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search ms-5"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/2/1_2.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Image 7</h4>
-                    <a href="{{ asset('customs/default_pics/2/1_2.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search ms-5"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{ asset('customs/default_pics/2/1_3.jpg') }}" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                    <h4>Image 8</h4>
-                    <a href="{{ asset('customs/default_pics/2/1_3.jpg') }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-search ms-5"></i></a>
-                </div>
-            </div>
-
-        </div>
-        <div>
-            <p class="text-center">
-                Vison Education CARDEY en milieu rural..
-
-                Ayant pour l'un des objectifs de soutenir l'education des enfants vulnerables tout en faisant la promotion de l'excellence en milieu rural, nous nous sommes rendu à FETIGBÉ ,
-                un village situé à 40kilomètre de la ville d'Atakpamé dans la region des plateaux pour partager des fournitures Scolaire à tous les éleves de l'Ecole primaire catholique de fétigbé en présence du chef du village , la comité des parents d'éleves, le directeur et les professeurs.
-                Merci à tous ceux qui ont participés de près et de loin pour que cette action soit éffective. Special remerciement à notre partenaire ONG unsealthethruth.
-            </p>
-        </div>
     </div>
 </section>

@@ -12,7 +12,7 @@ class FileUpload extends Model
 
     protected $fillable = [
         'mime', 'original_filename', 'filename', 'link', 'src', 'personalized_filename',
-        'size', 'folder_id', 'fileable_type', 'fileable_id'
+        'size', 'folder_id', 'fileable_type', 'fileable_id', 'gallery_id'
     ];
 
     public function fileable()
@@ -30,8 +30,8 @@ class FileUpload extends Model
         return $this->belongsTo(Folder::class);
     }
 
-    public function tender()
+    public function gallery()
     {
-        return $this->belongsTo(Tender::class);
+        return $this->belongsTo(Gallery::class);
     }
 }
